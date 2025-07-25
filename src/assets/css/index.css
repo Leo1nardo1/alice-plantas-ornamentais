@@ -190,10 +190,6 @@ nav {
     height: 450px;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
 
 .product-image {
     height: 50%;
