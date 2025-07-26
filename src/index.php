@@ -14,10 +14,11 @@
 <body>
 
     <nav class="navbar navbar-expand-lg position-sticky">
+        
         <div class="container-fluid mx-5">
             <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="assets/imagens/logo3.png" alt="Logo" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="#hero">
+                <img src="assets/imagens/alice-logo2.png" alt="Logo" class="d-inline-block align-text-top">
             </a>
 
             <!-- Botão toggle para mobile -->
@@ -32,7 +33,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produtos</a>
+                        <a class="nav-link" href="#produtos">Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre</a>
@@ -44,9 +45,16 @@
 
                 <!-- Ícones à direita -->
                 <div class="navbar-icons">
-                    <a href="#" title="Placeholder folha">
+                    
+                    <div class="contact-info d-flex justify-content-center gap-4">
+                       
+                        <div><i class="fa-solid fa-phone"></i> <a href="#" style="cursor: default;"> (12) 3456-7891</a></div>
+                        <div><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5571993226906?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos" target="_blank">(71) 91234-5678</a> </div>
+                        <div><i class="fa-brands fa-instagram"></i> <a href="">@aliceplantas</a></div>
+                    </div>
+                    <!-- <a href="#" title="Placeholder folha">
                         <i class="fa-solid fa-leaf"></i>
-                    </a>
+                    </a> -->
                     <!-- <a href="#" title="Perfil do Usuário">
                         <i class="fa-solid fa-user"></i>
                     </a> -->
@@ -59,7 +67,7 @@
         </div>
     </nav>
 
-    <section class="hero p-5">
+    <section id="hero" class="hero p-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 z-1 ps-4">
@@ -67,7 +75,7 @@
                     <p class="lead">
                         Traga mais vida para sua casa com nossas plantas ornamentais. Beleza, frescor e natureza no seu dia a dia!
                     </p>
-                    <button href="#produtos" class="btn btn-loja  mt-5">Ver Produtos</button>
+                    <a href="#produtos" class="btn btn-loja  mt-5">Ver Produtos</a>
                 </div>
 
                 <div class="col-md-6 text-center main-img-hero">
@@ -80,16 +88,10 @@
 
         </div>
     </section>
-    <div class="hero-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#67ad87" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,154.7C384,128,480,96,576,117.3C672,139,768,213,864,218.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-    </div>
 
 
 
-
-    <section class="products-section">
+    <section id="produtos" class="products-section">
         <div class="floating-leaves">
             <i class="fas fa-leaf leaf" style="left: 10%; animation-delay: 0s; font-size: 2rem;"></i>
             <i class="fas fa-seedling leaf" style="left: 20%; animation-delay: 5s; font-size: 1.5rem;"></i>
