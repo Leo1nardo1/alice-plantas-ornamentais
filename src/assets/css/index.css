@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Architects+Daughter&family=Bebas+Neue&family=Corben:wght@400;700&family=Poetsen+One&display=swap');
 
 :root {
-    --primary-green: #2d5016;
+    --primary-green: #0b4221;
     --light-green: #7cb342;
     --accent-green: #8bc34a;
     --dark-green: #48775d;
@@ -10,6 +10,7 @@
     --dark-gray: #2c2c2c;
     --light-gray: #f5f5f5;
     --medium-gray: #cccccc;
+    --half-gray: #9b9b9b;
     --nav-green: #7B8F6B;
 
 }
@@ -52,13 +53,16 @@ nav {
     gap: 15px;
     align-items: center;
 }
-.navbar-icons .contact-info i{
+
+.navbar-icons .contact-info i {
     font-size: 1.3rem;
     color: var(--cream);
 }
-.navbar-icons .contact-info a:hover{
+
+.navbar-icons .contact-info a:hover {
     color: var(--medium-gray);
 }
+
 .navbar-icons a {
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.2rem;
@@ -80,26 +84,56 @@ nav {
     box-shadow: none;
 }
 
-.navbar-nav li a {
-    color: white;
-    font-family: "Rubik", sans-serif;
+.navbar-nav a {
+    font-family: "Alata", sans-serif;
+    text-decoration: none;
+    color: var(--cream);
     font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.navbar-nav a:hover {
+    color: var(--medium-gray);
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--medium-gray);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+    width: 100%;
 }
 
 
 
 
-/******************************************************** HERO SECTION *****************************************************/
+/******************************************************** SEÇÃO HERO *****************************************************/
 .hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    /* background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); */
 }
 
 .hero h1 {
-    font-family: "Corben", sans-serif;
+    font-family: "Alata", sans-serif;
     color: #000000;
-    font-size: 4.5rem;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.hero .hero-camacari {
+    color: var(--primary-green);
 }
 
 .hero p {
@@ -133,14 +167,12 @@ nav {
 .hero .main-img-hero img {
     max-height: 70%;
     border-radius: 2rem;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* moved here */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .hero .main-img-hero img:hover {
     transform: scale(1.05);
 }
-
-
 
 .hero .background-img img {
     max-height: 50%;
@@ -151,9 +183,61 @@ nav {
     opacity: 0.6;
 }
 
+.btn-loja {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+}
+
+.btn-loja:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
+}
+
+.plant-badge {
+    position: absolute;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.badge-2 {
+    top: 5%;
+    right: 2%;
+    width: 140px;
+    height: 140px;
+}
+
+.plant-badge i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.plant-badge span {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
 
 
-/******************************************************** PRODUCT SECTION *****************************************************/
+/******************************************************** SEÇÃO DO PRODUTO *****************************************************/
 .products-section {
     padding: 80px 0;
     position: relative;
@@ -256,7 +340,7 @@ nav {
     color: var(--light-green);
 }
 
-.add-to-cart-btn{
+.add-to-cart-btn {
     background: linear-gradient(135deg, var(--light-green), var(--accent-green));
     display: flex;
     align-items: center;
@@ -274,7 +358,8 @@ nav {
     justify-content: center;
     cursor: pointer;
 }
-.product-info a{
+
+.product-info a {
     text-align: center;
 }
 
@@ -343,12 +428,6 @@ nav {
     transform: translateY(-2px);
 }
 
-
-
-
-
-
-
 .tooltip {
     position: absolute;
     background: #333;
@@ -382,20 +461,6 @@ nav {
     visibility: visible;
 }
 
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .product-card {
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-    .product-info {
-        height: auto;
-    }
-}
 
 .floating-leaves {
     position: absolute;
@@ -443,6 +508,138 @@ nav {
     }
 }
 
+/******************************************************** SEÇÃO LOJA FÍSICA *****************************************************/
+.loja-fisica {
+    background: var(--white);
+}
+
+.loja-fisica .section-title {
+    font-family: "Alata", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loja-fisica .section-subtitle {
+    font-family: "Alata", sans-serif;
+    font-size: 1.3rem;
+    color: var(--primary-green);
+}
+
+.card-image {
+    cursor: pointer;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(116, 185, 124, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #4a7c59;
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+    background: rgba(116, 185, 124, 0.2);
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    color: #4a7c59;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-content h3 {
+    color: #2d5016;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.info-content p {
+    color: #5a7c65;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+
+#img-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+#close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/******************************************************** FOOTER *****************************************************/
+.site-footer {
+    background: var(--dark-green);
+    font-family: "Alata", sans-serif;
+    color: #f1f1f1;
+    border-top: none;
+    padding: 3rem 2rem;
+}
+
+.site-footer h5 {
+    color: #ffe082;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.site-footer a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #ffe082;
+}
+
+.site-footer img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #ffe082;
+}
+
+.site-footer p {
+    font-size: 0.95rem;
+    color: var(--cream);
+}
+
+.site-footer .nav-item {
+    margin-bottom: 0.5rem;
+}
+
 
 /* Ajustes para mobile */
 @media (max-width: 1000px) {
@@ -460,5 +657,99 @@ nav {
     .navbar-nav {
         justify-content: center;
         align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+
+    .badge-2 {
+        top: 5%;
+        right: 2%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .plant-badge i {
+        font-size: 1.2rem;
+        color: var(--primary-green);
+        margin-bottom: 0.4rem;
+    }
+
+    .plant-badge span {
+        font-weight: 600;
+        font-size: 0.6rem;
+    }
+
+
+    .hero .background-img{
+        opacity: 0.3;
+    }
+
+    .loja-fisica .card{
+        margin-bottom: 16px;
+    }
+
+
+}
+@media (max-width: 1300px) {
+        .badge-2 {
+        top: 5%;
+        right: 2%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .plant-badge i {
+        font-size: 1.2rem;
+        color: var(--primary-green);
+        margin-bottom: 0.4rem;
+    }
+        .plant-badge span {
+        font-weight: 600;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .product-card {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .product-info {
+        height: auto;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+        .hero .main-img-hero{
+        border-top: 2px solid black;
+        padding: 16px;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 640px) {
+        .badge-2 {
+        top: 20%;
+
+    }
+}
+@media (max-width: 560px) {
+        .badge-2 {
+        top: 30%;
+
     }
 }

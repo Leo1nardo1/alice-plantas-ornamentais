@@ -247,3 +247,23 @@ aromaticaBtn.addEventListener('click', () => {
     removeActiveState();
     aromaticaBtn.classList.add("active");
 });
+
+//Seção loja física
+document.querySelectorAll('.zoomable-img').forEach(img => {
+    img.addEventListener('click', () => {
+        const lightbox = document.getElementById('img-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+    });
+});
+
+document.getElementById('close-lightbox').addEventListener('click', () => {
+    document.getElementById('img-lightbox').style.display = 'none';
+});
+
+document.getElementById('img-lightbox').addEventListener('click', (e) => {
+    if (e.target.id === 'img-lightbox') {
+        e.currentTarget.style.display = 'none';
+    }
+});
