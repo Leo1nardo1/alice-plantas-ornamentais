@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Architects+Daughter&family=Bebas+Neue&family=Corben:wght@400;700&family=Poetsen+One&display=swap');
+
+:root {
+    --primary-green: #0b4221;
+    --light-green: #7cb342;
+    --accent-green: #8bc34a;
+    --dark-green: #48775d;
+    --sage-green: #9caf88;
+    --cream: #f8f6f0;
+    --dark-gray: #2c2c2c;
+    --light-gray: #f5f5f5;
+    --medium-gray: #cccccc;
+    --half-gray: #9b9b9b;
+    --nav-green: #7B8F6B;
+    --background: #f2fde5;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+}
+
+/******************************************************** NAVBAR *****************************************************/
+
+nav {
+    background: var(--nav-green);
+    top: 0;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+/* Centralizar os nav links */
+.navbar-nav.mx-auto {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbar-icons .contact-info i {
+    font-size: 1.3rem;
+    color: var(--cream);
+}
+
+.navbar-icons .contact-info a:hover {
+    color: var(--medium-gray);
+}
+
+.navbar-icons a {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-icons a:hover {
+    color: white;
+}
+
+.navbar-icons a>.badge {
+    font-size: 0.6rem;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav a {
+    font-family: "Alata", sans-serif;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.navbar-nav a:hover {
+    color: var(--medium-gray);
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--medium-gray);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+    width: 100%;
+}
+
+/******************************************************** HERO *****************************************************/
+.hero {
+
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('../imagens/jardim-hero.jpg') no-repeat center center / cover;
+    color: var(--cream);
+    font-family: 'Corben', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+h1.display-3 {
+    position: relative;
+    display: inline-block;
+}
+
+h1.display-3::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 4px;
+    background-color: green;
+    margin-top: 0.5rem;
+}
+
+
+
+/******************************************************** HISTÓRIA *****************************************************/
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-text h1 {
+    color: var(--accent-green);
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-text p {
+    font-family: 'Alata', sans-serif;
+    font-size: 1.3rem;
+}
+
+/******************************************************** HISTÓRIA *****************************************************/
+
+
+.nossos-produtos h1 {
+    color: var(--accent-green);
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nossos-produtos p.lead {
+    font-family: 'Alata', sans-serif;
+    font-size: 1.3rem;
+}
+
+.nossos-produtos .card {
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+}
+
+.nossos-produtos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nossos-produtos .card-title {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nossos-produtos .card-text {
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+}
+
+.nossos-produtos .fas {
+    color: #66bb6a;
+    font-size: 1.5rem;
+}
+
+/******************************************************** FOOTER *****************************************************/
+.site-footer {
+    background: var(--dark-green);
+    font-family: "Alata", sans-serif;
+    color: #f1f1f1;
+    border-top: none;
+    padding: 3rem 2rem;
+}
+
+.site-footer h5 {
+    color: #ffe082;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.site-footer a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #ffe082;
+}
+
+.site-footer img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #ffe082;
+}
+
+.site-footer p {
+    font-size: 0.95rem;
+    color: var(--cream);
+}
+
+.site-footer .nav-item {
+    margin-bottom: 0.5rem;
+}

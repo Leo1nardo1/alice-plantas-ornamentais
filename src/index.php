@@ -38,9 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#loja-fisica">Loja Física</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#sobre-nos">Sobre nós</a>
-                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.php">Sobre nós</a>
+                    </li>
                 </ul>
 
 
