@@ -46,7 +46,6 @@ nav {
     margin-right: 0;
 }
 
-/* Centralizar os nav links */
 .navbar-nav.mx-auto {
     flex-grow: 1;
     justify-content: center;
@@ -263,4 +262,22 @@ h1.display-3::after {
 
 .site-footer .nav-item {
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+    .navbar-icons {
+        justify-content: flex-start;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgb(255, 255, 255);
+    }
+
+    .navbar-icons a {
+        margin: 15px 0 15px;
+    }
+
+    .navbar-nav {
+        justify-content: center;
+        align-items: center;
+    }
 }

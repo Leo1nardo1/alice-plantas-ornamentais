@@ -41,7 +41,6 @@ nav {
     margin-right: 0;
 }
 
-/* Centralizar os nav links */
 .navbar-nav.mx-auto {
     flex-grow: 1;
     justify-content: center;
